@@ -9,10 +9,12 @@
 </head>
 <body>
     <article id="randomActivityContainer">
-        <p id="randomActivity"></p>
+        <h1>Random Activity</h1>
         <button id="randomActivityButton">Show New Activity</button>
+        <p id="randomActivity"></p>
     </article>
-    <article id="participantsContainer">
+    <article>
+        <h1>Participants</h1>
         <select id="participantsSelection">
             <option value="">Number of Participants</option>
             <option value="1">1</option>
@@ -20,8 +22,10 @@
             <option value="3">3</option>
             <option value="4">4</option>
         </select>
-        <button id="getActivityButton">Generate Activity</button>
+        <p id="participantsActivityResult"></p>
+        <button id="getActivityButton">Get Activity</button>
     </article>
+
     <script src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js'></script>
     <script src='/js/app.js'></script>
 </body>
