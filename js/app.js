@@ -17,7 +17,7 @@ function randomActivityFailure(err) {
 }
 
 // Creating a function that is called when the user clicks on the button
-function getRandomActivity() { 
+function getRandomActivity(e) { 
 
     // Configuring the request with the type and URL and then sending the request when the button is clicked
     // If the request doesn't fail, it will call the randomActivitySuccess function
@@ -41,7 +41,9 @@ function participantsSuccess(res) {
     let participantsActivities = res.data;
     document.getElementById(`participantsActivityResult`).innerText = participantsActivities.activity;
 
+    // Getting the object representation of the dropdown menu
     // If the user does not select an option, print a message telling the user to select the number of participants from the dropdown menu
+    let participantsSelection = document.getElementById(`participantsSelection`);
     if (participantsSelection.value === "") {
         document.getElementById(`participantsActivityResult`).innerText = `Please select the number of participants.`;
     }
@@ -53,10 +55,13 @@ function participantsFailure(err) {
 }
 
 // Creating a function that is called when the user clicks on the button
-function getParticipantActivity() {
+function getParticipantActivity(e) {
+
+    // Getting the object representation of the dropdown menu
+    let participantsSelection = document.getElementById(`participantsSelection`);
 
     // Configuring the request with the type and URL
-    // Sending the request along with a parameter which is the number of participants the user has selected from the dropdown menu
+    // Sending the request along with a parameter being the number of participants the user has selected from the dropdown menu
     // If the request doesn't fail, it will call the participantsSuccess function
     // If the request fails, it will call the participantsFailure function
     axios.request({
@@ -67,9 +72,6 @@ function getParticipantActivity() {
         }
     }).then(participantsSuccess).catch(participantsFailure);
 }
-
-// Setting the dropdown menu as a global variable
-let participantsSelection = document.getElementById(`participantsSelection`);
 
 // Adding a click event to the get activity button and calling the function that will send a GET request and print the activity to the user based on the number of participants they have selected
 let getActivityButton = document.getElementById(`getActivityButton`);
@@ -205,7 +207,7 @@ function showAccessibilitySelected(e) {
     document.getElementById(`accessibility`).innerText = `Accessibility: ${accessibilitySelected.value}`;
 }
 
-// // Creating a function that is called if the network is done and there are no errors
+// Creating a function that is called if the network is done and there are no errors
 function accessibilitySuccess(res) {
 
     // Storing the returned JavaScript object into a variable
@@ -233,8 +235,8 @@ function accessibilityFailure(err) {
 function getActivityBasedOnAccessibility(e) {
 
     // When the button is clicked, configure the request with the type and URL with the value of the parameter being the accessibility value the user has selected
-    // If the request doesn't fail, it will call the priceRangeSuccess function
-    // If the request fails, it will call the priceRangeFailure function
+    // If the request doesn't fail, it will call the accessibilitySuccess function
+    // If the request fails, it will call the accessibilityFailure function
     axios.request({
         method: `GET`,
         url: `http://www.boredapi.com/api/activity`,
