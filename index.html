@@ -8,69 +8,78 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <article>
-        <h1>Random Activity</h1>
-        <button id="randomActivityButton">Show New Activity</button>
-        <p id="randomActivity"></p>
-    </article>
-    <article>
-        <h1>Participants</h1>
-        <select id="participantsSelection">
-            <option value="">Number of Participants</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select>
-        <button id="getActivityButton">Get Activity</button>
-        <p id="participantsActivityResult"></p>
-    </article>
-    <article>
-        <h1>Categories</h1>
-        <form action="javascript:void(0)">
-            <input type="radio" name="category" value="busywork" class="categoryInput" id="category1">
-            <label for="category1">Busywork</label>
-            <input type="radio" name="category" value="charity" class="categoryInput" id="category2">
-            <label for="category2">Charity</label>
-            <input type="radio" name="category" value="cooking" class="categoryInput" id="category3">
-            <label for="category3">Cooking</label>
-            <input type="radio" name="category" value="diy" class="categoryInput" id="category4">
-            <label for="category4">DIY</label>
-            <input type="radio" name="category" value="education" class="categoryInput" id="category5">
-            <label for="category5">Education</label>
-            <input type="radio" name="category" value="music" class="categoryInput" id="category6">
-            <label for="category6">Music</label>
-            <input type="radio" name="category" value="recreational" class="categoryInput" id="category7">
-            <label for="category7">Recreational</label>
-            <input type="radio" name="category" value="relaxation" class="categoryInput" id="category8">
-            <label for="category8">Relaxation</label>
-            <input type="radio" name="category" value="social" class="categoryInput" id="category9">
-            <label for="category9">Social</label>
+    <header>
+        <h1>Bored?</h1>
+        <p>Select an activity to do based on your preferences!</p>
+        <hr>
+    </header>
+    <main>
+        <article id="randomActivityContainer">
+            <h1>Random Activity</h1>
+            <button id="randomActivityButton">Get Activity</button>
+            <p id="randomActivity"></p>
+        </article>
+        <article id="participantsContainers">
+            <h1>Participants</h1>
+            <select id="participantsSelection">
+                <option value="">Number of Participants</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+            <button id="getActivityButton">Get Activity</button>
+            <p id="participantsActivityResult"></p>
+        </article>
+        <article id="categoryContainer">
+            <h1>Categories</h1>
+            <form action="javascript:void(0)">
+                <input type="radio" name="category" value="busywork" class="categoryInput" id="category1">
+                <label for="category1">Busywork</label>
+                <input type="radio" name="category" value="charity" class="categoryInput" id="category2">
+                <label for="category2">Charity</label>
+                <input type="radio" name="category" value="cooking" class="categoryInput" id="category3">
+                <label for="category3">Cooking</label>
+                <input type="radio" name="category" value="diy" class="categoryInput" id="category4">
+                <label for="category4">DIY</label>
+                <input type="radio" name="category" value="education" class="categoryInput" id="category5">
+                <label for="category5">Education</label>
+                <input type="radio" name="category" value="music" class="categoryInput" id="category6">
+                <label for="category6">Music</label>
+                <input type="radio" name="category" value="recreational" class="categoryInput" id="category7">
+                <label for="category7">Recreational</label>
+                <input type="radio" name="category" value="relaxation" class="categoryInput" id="category8">
+                <label for="category8">Relaxation</label>
+                <input type="radio" name="category" value="social" class="categoryInput" id="category9">
+                <label for="category9">Social</label>
+            </form>
             <input type="submit" value ="Get Activity" id="categoryActivityButton">
-        </form>
-        <p id="categoryActivityResult"></p>
-    </article>
-    <article>
-        <h1>Price Ranges</h1>
-        <p>Please select a price range between 0 and 1.</p>
-        <form action="javascript:void(0)">
-            <input type="number" min="0" step="0.01" id="minPrice" placeholder="Minimum Price">
-            <input type="number" min="0" step="0.01" id="maxPrice" placeholder="Maximum Price">
-            <input type="submit" id="priceRangeActivityButton" value="Get Activity">
-        </form>
-        <p id="priceRangeActivityResult"></p>
-    </article>
-    <article>
-        <h1>Accessibility Values</h1>
-        <p>Please select an accessibility value.</p>
-        <form action="javascript:void(0)">
-            <input type="range" id="accessibilityInput" min="0" max="1" step="0.01">
-            <input type="submit" id="accessibilityActivityButton" value="Get Activity">
-        </form>
-        <p id="accessibility"></p>
-        <p id="accessibilityActivityResult"></p>
-    </article>
-
+            <p id="categoryActivityResult"></p>
+        </article>
+        <article id="priceRangeContainer">
+            <h1>Price Ranges</h1>
+            <p>Please select a price range between 0 and 1.</p>
+            <form action="javascript:void(0)">
+                <input type="number" min="0" step="0.01" id="minPrice" placeholder="Minimum Price">
+                <input type="number" min="0" step="0.01" id="maxPrice" placeholder="Maximum Price">
+                <input type="submit" id="priceRangeActivityButton" value="Get Activity">
+            </form>
+            <p id="priceRangeActivityResult"></p>
+        </article>
+        <article id="accessibilityContainer">
+            <h1>Accessibility Values</h1>
+            <p>Please select an accessibility value.</p>
+            <form action="javascript:void(0)">
+                <input type="range" id="accessibilityInput" min="0" max="1" step="0.01">
+                <input type="submit" id="accessibilityActivityButton" value="Get Activity">
+            </form>
+            <p id="accessibility"></p>
+            <p id="accessibilityActivityResult"></p>
+        </article>
+    </main>
+    <footer>
+        <p>Assignment W12B by Monica Tamang</p>
+    </footer>
     <script src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js'></script>
     <script src='/js/app.js'></script>
 </body>

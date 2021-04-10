@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 100vw;
+  font-family: 'Lexend', sans-serif;
+}
+
+body header {
+  text-align: center;
+}
+
+body header > h1 {
+  margin: 5vh 0vh 3vh 0vh;
+}
+
+body header > p {
+  margin-bottom: 5vh;
+}
+
+body main {
+  display: -ms-grid;
+  display: grid;
+  padding: 5vh 10vh 0vh 10vh;
+}
+
+body main #randomActivityContainer {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 30px;
+  padding: 5vh 3vh;
+}
+
+body main #randomActivityContainer > h1 {
+  font-weight: 600;
+}
+
+body main #randomActivityContainer #randomActivityButton {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 5px lightgrey;
+          box-shadow: 1px 1px 5px lightgrey;
+  width: 10vw;
+  padding: 1% 0%;
+  cursor: pointer;
+  background: #98ddca;
+}
+
+body main #randomActivityContainer #randomActivityButton:focus {
+  outline: none;
+}
+
+body main #randomActivityContainer #randomActivityButton:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body main #participantsContainers {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 20px;
+  padding: 5vh 3vh;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+}
+
+body main #participantsContainers > h1 {
+  font-weight: 600;
+}
+
+body main #participantsContainers #participantsSelection {
+  width: 20vw;
+  font-family: 'Lexend', sans-serif;
+}
+
+body main #participantsContainers #getActivityButton {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 5px lightgrey;
+          box-shadow: 1px 1px 5px lightgrey;
+  width: 10vw;
+  padding: 1% 0%;
+  cursor: pointer;
+  background: #d5ecc2;
+}
+
+body main #participantsContainers #getActivityButton:focus {
+  outline: none;
+}
+
+body main #participantsContainers #getActivityButton:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body main #categoryContainer {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 20px;
+  padding: 5vh 3vh;
+}
+
+body main #categoryContainer > h1 {
+  font-weight: 600;
+}
+
+body main #categoryContainer > form {
+  display: -ms-grid;
+  display: grid;
+  justify-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-rows: (1fr)[9];
+      grid-template-rows: repeat(9, 1fr);
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 20px;
+  width: 10vw;
+  margin-top: 2vh;
+}
+
+body main #categoryContainer #categoryActivityButton {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 5px lightgrey;
+          box-shadow: 1px 1px 5px lightgrey;
+  width: 10vw;
+  padding: 1% 0%;
+  cursor: pointer;
+  background: #ffd3b4;
+}
+
+body main #categoryContainer #categoryActivityButton:focus {
+  outline: none;
+}
+
+body main #categoryContainer #categoryActivityButton:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body main #priceRangeContainer {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 30px;
+  padding: 5vh 3vh;
+}
+
+body main #priceRangeContainer > h1 {
+  font-weight: 600;
+}
+
+body main #priceRangeContainer > form > input {
+  padding: 0.5% 0%;
+  font-family: 'Lexend', sans-serif;
+}
+
+body main #priceRangeContainer > form #priceRangeActivityButton {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 5px lightgrey;
+          box-shadow: 1px 1px 5px lightgrey;
+  width: 10vw;
+  padding: 1% 0%;
+  cursor: pointer;
+  background: #ffaaa7;
+}
+
+body main #priceRangeContainer > form #priceRangeActivityButton:focus {
+  outline: none;
+}
+
+body main #priceRangeContainer > form #priceRangeActivityButton:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body main #accessibilityContainer {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 20px;
+  padding: 5vh 3vh;
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+}
+
+body main #accessibilityContainer > h1 {
+  font-weight: 600;
+}
+
+body main #accessibilityContainer > form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  width: 20vw;
+}
+
+body main #accessibilityContainer > form #accessibilityInput {
+  width: 15vw;
+}
+
+body main #accessibilityContainer #accessibilityActivityButton {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 5px lightgrey;
+          box-shadow: 1px 1px 5px lightgrey;
+  width: 10vw;
+  padding: 1% 0%;
+  cursor: pointer;
+  background: #98ddca;
+}
+
+body main #accessibilityContainer #accessibilityActivityButton:focus {
+  outline: none;
+}
+
+body main #accessibilityContainer #accessibilityActivityButton:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+body footer {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  min-height: 10vh;
+}
+/*# sourceMappingURL=style.css.map */

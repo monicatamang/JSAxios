@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&display=swap');
+
+@mixin buttonStyle() {
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px lightgrey;
+    width: 10vw;
+    padding: 1% 0%;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        box-shadow: none;
+    }
+}
+
+@mixin containerStyle($rowGap) {
+    display: grid;
+    row-gap: $rowGap;
+    padding: 5vh 3vh;
+
+    >h1 {
+        font-weight: 600;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 100vw;
+    font-family: 'Lexend', sans-serif;
+
+    header {
+        text-align: center;
+    
+        >h1 {
+            margin: 5vh 0vh 3vh 0vh;
+        }
+    
+        >p {
+            margin-bottom: 5vh;
+        }
+    }
+
+    main {
+        display: grid;
+        padding: 5vh 10vh 0vh 10vh;
+
+        #randomActivityContainer {
+            @include containerStyle(30px);
+
+            #randomActivityButton {
+                @include buttonStyle();
+                background: #98ddca;
+            }
+        }
+
+        #participantsContainers {
+            @include containerStyle(20px);
+            grid-template-rows: 1fr 1fr 1fr;
+
+            #participantsSelection {
+                width: 20vw;
+                font-family: 'Lexend', sans-serif;
+            }
+
+            #getActivityButton {
+                @include buttonStyle();
+                background: #d5ecc2;
+            }
+        }
+
+        #categoryContainer {
+            @include containerStyle(20px);
+
+            >form {
+                display: grid;
+                justify-items: start;
+                align-items: center;
+                grid-template-rows: repeat(9, 1fr);
+                grid-template-columns: 1fr 1fr;
+                column-gap: 20px;
+                row-gap: 20px;
+                width: 10vw;
+                margin-top: 2vh;
+            }
+
+            #categoryActivityButton {
+                @include buttonStyle();
+                background: #ffd3b4;
+            }
+        }
+
+        #priceRangeContainer {
+            @include containerStyle(30px);
+
+            >form {
+
+                >input {
+                    padding: 0.5% 0%;
+                    font-family: 'Lexend', sans-serif;
+                }
+
+                #priceRangeActivityButton {
+                    @include buttonStyle();
+                    background: #ffaaa7;
+                }
+            }
+        }
+
+        #accessibilityContainer {
+            @include containerStyle(20px);
+            grid-template-rows: repeat(5, 1fr);
+
+            >form {
+                display: grid;
+                grid-template-columns: auto auto;
+                column-gap: 30px;
+                width: 20vw;
+
+                #accessibilityInput {
+                    width: 15vw;
+                }
+            }
+
+            #accessibilityActivityButton {
+                @include buttonStyle();
+                background: #98ddca;
+            }
+        }
+    }
+
+    footer {
+        display: grid;
+        place-items: center;
+        min-height: 10vh;
+    }
+}
