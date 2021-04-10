@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <article id="randomActivityContainer">
+    <article>
         <h1>Random Activity</h1>
         <button id="randomActivityButton">Show New Activity</button>
         <p id="randomActivity"></p>
@@ -22,10 +22,10 @@
             <option value="3">3</option>
             <option value="4">4</option>
         </select>
-        <p id="participantsActivityResult"></p>
         <button id="getActivityButton">Get Activity</button>
+        <p id="participantsActivityResult"></p>
     </article>
-    <article id="categoryContainer">
+    <article>
         <h1>Categories</h1>
         <form action="javascript:void(0)">
             <input type="radio" name="category" value="busywork" class="categoryInput" id="category1">
@@ -46,13 +46,29 @@
             <label for="category8">Relaxation</label>
             <input type="radio" name="category" value="social" class="categoryInput" id="category9">
             <label for="category9">Social</label>
-            <p id="categoryActivityResult"></p>
             <input type="submit" value ="Get Activity" id="categoryActivityButton">
         </form>
+        <p id="categoryActivityResult"></p>
     </article>
     <article>
         <h1>Price Ranges</h1>
-        <p>Please enter a price.</p>
+        <p>Please select a price range between 0 and 1.</p>
+        <form action="javascript:void(0)">
+            <input type="number" min="0" step="0.01" id="minPrice" placeholder="Minimum Price">
+            <input type="number" min="0" step="0.01" id="maxPrice" placeholder="Maximum Price">
+            <input type="submit" id="priceRangeActivityButton" value="Get Activity">
+        </form>
+        <p id="priceRangeActivityResult"></p>
+    </article>
+    <article>
+        <h1>Accessibility Values</h1>
+        <p>Please select an accessibility value.</p>
+        <form action="javascript:void(0)">
+            <input type="range" id="accessibilityInput" min="0" max="1" step="0.01">
+            <input type="submit" id="accessibilityActivityButton" value="Get Activity">
+        </form>
+        <p id="accessibility"></p>
+        <p id="accessibilityActivityResult"></p>
     </article>
 
     <script src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js'></script>
